@@ -1,25 +1,69 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Management — Mr. Entrepreneur</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div id="page-root"></div>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Management — Mr. Entrepreneur</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="brand"><a href="main.html" style="color:white;text-decoration:none">Mr. Entrepreneur</a></div>
+    <div class="nav-buttons">
+      <a href="main.html"><button>Main</button></a>
+      <a href="about.html"><button>About</button></a>
+      <a href="welcome.html"><button>Home</button></a>
+    </div>
+  </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', ()=> {
-        const root = document.getElementById('page-root');
-        renderNavbar(root);
-        renderManagementPage(root);
-        const f = document.createElement('div');
-        f.className = 'app-footer';
-        f.innerHTML = '&copy; Mr. Entrepreneur — Management';
-        root.appendChild(f);
-      });
-    </script>
-  </body>
+  <div class="page-content">
+    <section style="text-align:center;margin-bottom:18px">
+      <h2>Management Team</h2>
+      <p style="color:#666">Meet the people behind Mr. Entrepreneur.</p>
+    </section>
+
+    <section class="management-grid">
+      <div class="manager-card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60" alt="Aisha">
+        <h3>Aisha Mwangi</h3>
+        <p>Founder & CEO</p>
+      </div>
+
+      <div class="manager-card">
+        <img src="https://images.unsplash.com/photo-1541271696563-3be6a6f0cda3?w=800&q=60" alt="James">
+        <h3>James Njoroge</h3>
+        <p>Head of Partnerships</p>
+      </div>
+
+      <div class="manager-card">
+        <img src="https://images.unsplash.com/photo-1545996124-1a9fd3d2b0c1?w=800&q=60" alt="Grace">
+        <h3>Grace Otieno</h3>
+        <p>Operations Director</p>
+      </div>
+
+      <div class="manager-card">
+        <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?w=800&q=60" alt="Peter">
+        <h3>Peter Kimani</h3>
+        <p>Chief Technology Officer</p>
+      </div>
+
+      <div class="manager-card">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=60" alt="Lilian">
+        <h3>Lilian Wanjiru</h3>
+        <p>Head of Marketing</p>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>&copy; Mr. Entrepreneur — Management</p>
+    </footer>
+  </div>
+
+  <script>
+    // if you want a JS-driven render of management, call loadManagement() here.
+    // document.addEventListener('DOMContentLoaded', loadManagement);
+  </script>
+</body>
 </html>
+

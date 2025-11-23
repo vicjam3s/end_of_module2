@@ -1,232 +1,276 @@
+/* -------------------------------------
+   GLOBAL RESET
+-------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f3f3f3;
-    color: #222;
+  background: #f8f6f1; /* soft gold-neutral */
+  color: #222;
+  line-height: 1.5;
+  min-height: 100vh;
 }
 
-h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-}
-
+/* -------------------------------------
+   NAVBAR — BLACK + GOLD
+-------------------------------------- */
 nav {
-    width: 100%;
-    background-color: #1a1a1a;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0a0a0a;
+  color: white;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #d4af37; /* gold border */
+  z-index: 1000;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+nav .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4af37;
 }
 
-nav a:hover {
-    color: #f0b000;
+nav .nav-buttons button {
+  margin-left: 10px;
+  padding: 9px 16px;
+  border: 1px solid #d4af37;
+  background: #0a0a0a;
+  color: #d4af37;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
-.nav-buttons button {
-    background-color: #f0b000;
-    color: black;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 6px;
+nav .nav-buttons button:hover {
+  background: #d4af37;
+  color: #0a0a0a;
 }
 
-.nav-buttons button:hover {
-    background-color: #d99a00;
-}
-
+/* Offset for fixed navbar */
 .page-content {
-    padding-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
+/* -------------------------------------
+   FOOTER — DEEP BLACK + GOLD
+-------------------------------------- */
+.app-footer {
+  background: #0a0a0a;
+  color: #d4af37;
+  text-align: center;
+  padding: 18px;
+  border-top: 3px solid #d4af37;
+  margin-top: 40px;
+}
 
+/* -------------------------------------
+   WELCOME PAGE
+-------------------------------------- */
 .welcome-header {
-    text-align: center;
-    margin-top: 120px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .welcome-header h1 {
-    font-size: 3rem;
-    color: #222;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0a0a0a;
 }
 
 .welcome-header p {
-    font-size: 1.3rem;
-    margin-top: 10px;
+  font-size: 1.2rem;
+  color: #5a4f30;
 }
 
 .welcome-images {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 25px 0;
+  flex-wrap: wrap;
 }
 
 .welcome-images img {
-    width: 280px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 0 15px;
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
 
-.welcome-about {
-    text-align: center;
-    width: 70%;
-    margin: auto;
-    padding: 20px 0;
-    font-size: 1.1rem;
+/* -------------------------------------
+   CARD STYLE — GOLD-ACCENTED
+-------------------------------------- */
+.card {
+  background: #fffdf6;
+  padding: 24px;
+  border-radius: 10px;
+  border-left: 6px solid #d4af37;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+  margin-bottom: 25px;
 }
 
+/* -------------------------------------
+   FORMS (Sign In / Sign Up)
+-------------------------------------- */
 .form-container {
-    width: 350px;
-    margin: 150px auto;
-    background-color: white;
-    padding: 25px 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
+  max-width: 420px;
+  margin: 30px auto;
 }
 
-.form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 14px 0;
+  border: 1px solid #b08c2b;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fffef9;
 }
 
-.form-container input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 6px;
-    border: 1px solid #aaa;
+form input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 5px #d4af37;
 }
 
-.form-container button {
-    width: 100%;
-    padding: 12px;
-    background-color: #f0b000;
-    border: none;
-    color: black;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 1rem;
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #d4af37;
+  color: #0a0a0a;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.25s;
 }
 
-.form-container button:hover {
-    background-color: #d99a00;
+form button:hover {
+  background: #b08c2b;
 }
 
+/* -------------------------------------
+   SEARCH SECTION (Main Page)
+-------------------------------------- */
 .search-section {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.search-section input {
-    width: 60%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #666;
+.search-section input[type="search"] {
+  width: 70%;
+  max-width: 460px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #b08c2b;
+  font-size: 1rem;
+  background: #fffef9;
+}
+
+.search-section button {
+  padding: 10px 18px;
+  background: #d4af37;
+  border: none;
+  color: #0a0a0a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 8px;
+}
+
+.search-section button:hover {
+  background: #b08c2b;
 }
 
 #searchResults {
-    width: 60%;
-    margin: 20px auto;
+  margin-top: 15px;
+  color: #222;
+  font-weight: bold;
 }
 
-.result-item {
-    background-color: white;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 10px 0;
-    border-left: 5px solid #f0b000;
-}
-
+/* -------------------------------------
+   BUSINESS TILES GRID — GOLD PANELS
+-------------------------------------- */
 .tiles-container {
-    width: 70%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
 .tile {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 8px #ddd;
-    font-size: 1.1rem;
-    font-weight: bold;
+  background: #fffdf2;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid #d4af37;
+  color: #0a0a0a;
 }
 
 .tile:hover {
-    background-color: #f0b000;
-    color: black;
-    cursor: pointer;
+  background: #d4af37;
+  color: #0a0a0a;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.20);
 }
 
+/* -------------------------------------
+   MANAGEMENT PAGE — GOLD FRAMES
+-------------------------------------- */
 .management-grid {
-    width: 70%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
 }
 
 .manager-card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 8px #ddd;
+  background: #fffdf6;
+  padding: 18px;
+  border-radius: 12px;
+  border-top: 5px solid #d4af37;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  text-align: center;
 }
 
 .manager-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
 }
 
 .manager-card h3 {
-    margin: 10px 0 5px;
+  margin: 10px 0 4px;
+  color: #0a0a0a;
 }
 
-.about-section {
-    width: 70%;
-    margin: auto;
-    padding-bottom: 50px;
+.manager-card p {
+  color: #5a4f30;
 }
 
+/* -------------------------------------
+   ABOUT US PAGE
+-------------------------------------- */
 .about-section p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-footer p {
-    margin: 5px 0;
+  margin-bottom: 15px;
+  color: #333;
 }

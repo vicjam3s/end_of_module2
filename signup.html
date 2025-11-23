@@ -1,47 +1,39 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Sign Up — Mr. Entrepreneur</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div id="page-root">
-      <!-- navbar -->
-      <div class="container" style="max-width:760px;margin-top:60px">
-        <div class="card form">
-          <h2>Create an account</h2>
-          <p style="color:var(--muted)">Join Mr. Entrepreneur to access supplier listings and manage your vendor relationships.</p>
-          <div id="signup-feedback" style="color:var(--danger);margin-bottom:8px"></div>
-          <form id="signup-form">
-            <label for="s-name">Full name</label>
-            <input id="s-name" type="text" required />
-            <label for="s-email">Email</label>
-            <input id="s-email" type="email" required />
-            <label for="s-pass">Password</label>
-            <input id="s-pass" type="password" required />
-            <button class="submit" type="submit">Sign Up</button>
-          </form>
-          <p style="color:var(--muted);margin-top:10px">Already have an account? <a href="signin.html">Sign in</a></p>
-        </div>
-      </div>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sign Up — Mr. Entrepreneur</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="brand"><a href="welcome.html" style="color:white;text-decoration:none">Mr. Entrepreneur</a></div>
+    <div class="nav-buttons">
+      <a href="signin.html"><button>Sign In</button></a>
+    </div>
+  </nav>
 
-      <div class="app-footer">
-        &copy; Mr. Entrepreneur
-      </div>
+  <div class="page-content">
+    <div class="form-container card">
+      <h2>Create an account</h2>
+      <form id="signup-form" onsubmit="goToMainPage(); return false;">
+        <input id="s-name" type="text" placeholder="Full name" required />
+        <input id="s-email" type="email" placeholder="Email address" required />
+        <input id="s-pass" type="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p style="text-align:center;color:#666;margin-top:12px">
+        Already have an account? <a href="signin.html">Sign in</a>
+      </p>
     </div>
 
-    <script>
-      // navbar guest
-      document.addEventListener('DOMContentLoaded', ()=> {
-        renderNavbar(document.getElementById('page-root'));
-
-        const form = document.getElementById('signup-form');
-        const fb = document.getElementById('signup-feedback');
-        handleSignupForm(form, fb);
-      });
-    </script>
-  </body>
+    <footer class="app-footer">
+      <p>&copy; Mr. Entrepreneur</p>
+    </footer>
+  </div>
+</body>
 </html>
+
