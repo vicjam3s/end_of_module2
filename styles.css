@@ -1,9 +1,10 @@
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: candara;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,7 +18,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0a0a0a;
+  background: #0a0a0aea;
   color: white;
   padding: 16px 28px;
   display: flex;
@@ -58,7 +59,7 @@ nav .nav-buttons button:hover {
 }
 
 .app-footer {
-  background: #0a0a0a;
+  background: #0a0a0ae3;
   color: #d4af37;
   text-align: center;
   padding: 18px;
@@ -216,7 +217,7 @@ form button:hover {
 }
 
 .manager-card {
-  background: #fffdf6;
+  background: #cacaca;
   padding: 18px;
   border-radius: 12px;
   border-top: 5px solid #d4af37;
